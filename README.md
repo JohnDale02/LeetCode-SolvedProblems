@@ -1,2 +1,2 @@
 # LeetCode-SolvedProblems
-- A running list of LeetCode problems that I have solved
+LeetCode problems that I have solved categorized by their fundamental topics
