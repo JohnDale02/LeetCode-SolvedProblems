@@ -1,0 +1,28 @@
+
+# runtime efficiency solution
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        uniqueNums = set()
+        for i in nums: 
+            if i not in uniqueNums:
+                uniqueNums.add(i)
+            else:
+                return True
+        return False
+
+# memory efficiency solution
+
+class Solution: 
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        sortedNums = sorted(nums) 
+        for count, value in enumerate(sortedNums):
+            if count == 0:
+                pass
+            else:
+                if sortedNums[count] == sortedNums[count-1]:
+                    return True
+                
+        return False
+
+
