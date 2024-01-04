@@ -1,0 +1,19 @@
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # for each of the input string 
+        output = {}  # dictionary {"Key": [value1, value2]} 
+
+        for string in strs: 
+
+            key = "".join(sorted(string))
+
+            if key not in output:
+                output[key] = [string]
+            else: 
+                output[key].append(string)
+        
+        return list(output.values())
+                
+                
+# given an array of strings strs, group anagrams together 
+# anagram = words made up of the same exact letter set
